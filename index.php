@@ -6,9 +6,13 @@ $badword = $_GET["badword"];
 
 $replace = str_replace($badword, "***", $parag);
 
-$length = strlen($replace);
+$length_orig = strlen($parag);
+
+$length_repl = strlen($replace);
 
 ?>
 
+<p><?php echo $parag; ?></p>
+<p><?php echo "La lunghezza del paragrafo è di " .$length_orig ." caratteri."; ?></p>
 <p><?php echo $replace; ?></p>
-<p><?php echo "La lunghezza del paragrafo è di " .$length ." caratteri."; ?></p>
+<p><?php echo "La lunghezza del paragrafo è di " .$length_repl ." caratteri."; ?></p>
